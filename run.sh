@@ -1,5 +1,6 @@
 #!/bin/bash
 
+VIM=/opt/homebrew/bin/vimr
 AW_PATH=$HOME/osx-vimr-anywhere
 TMPFILE_DIR=/tmp/vim-anywhere
 TMPFILE=$TMPFILE_DIR/last-buffer
@@ -8,9 +9,12 @@ VIM_OPTS='--wait'
 mkdir -p $TMPFILE_DIR
 touch $TMPFILE
 
-app=$(osascript $AW_PATH/script/current_app.scpt)
+app=$(osascript \
+    -e 'tell application "System Events" 
+            copy (name of application processes whose frontmost is true) to stdout 
+        end tell')
 
-/usr/local/bin/vimr $VIM_OPTS $TMPFILE
+$VIM $VIM_OPTS $TMPFILE
 
 LANG=en_US.UTF-8 pbcopy < $TMPFILE
 osascript -e "activate application \"$app\""
