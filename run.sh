@@ -4,7 +4,7 @@ VIM=/opt/homebrew/bin/vimr
 AW_PATH=$HOME/osx-vimr-anywhere
 TMPFILE_DIR=/tmp/vim-anywhere
 TMPFILE=$TMPFILE_DIR/last-buffer
-VIM_OPTS='--wait'
+VIM_OPTS='--wait -n'
 
 mkdir -p $TMPFILE_DIR
 touch $TMPFILE
