@@ -18,7 +18,7 @@ Skhd is a tool to set up hotkeys (and it work faster than the solution from the 
 brew install vimr
 
 # setup skdh
-brew install skdh
+brew install skhd
 brew services start skhd
 touch ~/.skhdrc
 echo 'shift + alt - v : bash ~/osx-vimr-anywhere/run.sh' > ~/.skhdrc 
