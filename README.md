@@ -10,7 +10,7 @@ Also current implementation works n times faster.
 
 ## Installation
 
-This implementation depends on 2 apps: [vimr][2] and [skdh][3].
+This implementation depends on 2 apps: [vimr][3] and [skdh][2].
 Skhd is a tool to set up hotkeys (and it work faster than the solution from the original vim-anywhere).
 
 ```bash
